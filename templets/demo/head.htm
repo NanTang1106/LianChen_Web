@@ -1,0 +1,73 @@
+<header id="fh5co-header">
+    <div class="layout head-top">
+      <div class="container">
+        <div class="line inner">
+          <div class="xl12 xs8 xm8">
+            <div id="demo" class="welcome">
+              <div class="loopbox">
+                <div id="demo1">{dede:global.cfg_top/}</div>
+                <div id="demo2"></div>
+              </div>
+            </div>
+          </div>
+          <div class="xl12 xs4 xm4">
+            <div class="top-contact float-right">
+              <ul>
+                <li id="hov-weixin-id"> <a id="weixint" data-target="weixint-content" href="#none"> <i class="icon-weixin"> </i> </a>
+                  <div class="weixint-content hidden">
+                    <div class="text-center weixin-img"> <img src="/style/images/ma.png"> </div>
+                  </div>
+                </li>
+                <li><a href="http://wpa.qq.com/msgrd?v=1&amp;uin={dede:global.cfg_qq/}&amp;site=&amp;menu=yes" target="_blank"><i class="icon-qq"></i></a></li>
+                <li><a href="{dede:global.cfg_weibo/}" target="_blank"><i class="icon-weibo"></i></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="layout head-middle">
+      <div class="container">
+        <div class="line">
+          <div class="xl12 xs3 xm5 xb6">
+            <div class="logo">
+              <!-- <h1><a href="/" title="{dede:global.cfg_webname/}"><img src="/style/images/logo.jpg" /></a></h1> -->
+              <h1>无锡狮子王科技</h1>
+            </div>
+          </div>
+          <div class="xl12 xs9 xm7 xb6 head-info">
+            <div class="x4 item1">
+              <p>开放时间<br/>
+                <span>{dede:global.cfg_sj/}</span></p>
+            </div>
+            <div class="x4 item2">
+              <p>服务热线<br/>
+                <span>{dede:global.cfg_dh/}</span></p>
+            </div>
+            <div class="x4 item3">
+              <p>公司地址<br/>
+                <span>{dede:global.cfg_dz/}</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="layout fixed header-box">
+      <div class="container">
+        <div class="nav-navicon" id="nav-main1">
+          <ul class="nav  nav-inline  nav-menu">
+            <li {dede:field name=typeid runphp="yes"}(@me=="")? @me=" class='current'":@me="";{/dede:field}><a class="first-level" href='/'>首页</a></li>
+            {dede:channelartlist row=10 typeid='top'}
+            <li {dede:field name='currentstyle'/}><a class="first-level" href='{dede:field name='typeurl'/}'>{dede:field name='typename'/}<span class="downward"></span></a>
+              <ul class="drop-menu">
+                {dede:channel type='son' noself='yes'}
+                <li><a href='[field:typelink/]' title="[field:typename/]">[field:typename/]</a></li>
+                {/dede:channel}
+              </ul>
+            </li>
+            {/dede:channelartlist}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </header>
